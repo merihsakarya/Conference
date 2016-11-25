@@ -1,239 +1,196 @@
+<div class="col-lg-8 col-sm-8" ng-controller="ConferenceCtrl">
 
-<div class="section-container container" ng-controller="ConferenceCtrl">
-	<div class="gdlr-item gdlr-content-item">
-		<div class="gdlr-shortcode-wrapper">
-			<div class="text-center">
-				<div class="gdlr-item-title-head">
-					<h3
-						class="gdlr-item-title gdlr-skin-title gdlr-skin-border gdlr-title-large">
-						</p><p>JAX London 2016 Program Preview</p><p>
-					</h3>
-					<div class="clear"></div>
-				</div> 
-			</div>
+	<div class="card hovercard">
+        <div class="card-background">
+            <img class="card-bkimg" alt="" src="/img/jax_london_logo.png">
+        </div>
+        <div class="useravatar">
+            <img alt="" src="/img/jax_london_logo.png">
+        </div>
+        <div class="card-info"> <span class="card-title">JAX LONDON 2016 PROGRAM PREVIEW</span>
+
+        </div>
+    </div>
+
+	<div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
+		<div class="btn-group" role="group">
+			<button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab" ng-click="selectTab($event)">
+				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+				<div>Day 1</div>
+			</button>
 		</div>
-		</p>
+		<div class="btn-group" role="group">
+			<button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab" ng-click="selectTab($event)">
+				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+				<div>Day 2</div>
+			</button>
+		</div>
+		<div class="btn-group" role="group">
+			<button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab" ng-click="selectTab($event)">
+				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+				<div>Day 3</div>
+			</button>
+		</div>
+		<div class="btn-group" role="group">
+			<button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab" ng-click="selectTab($event)">
+				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
+				<div>Day 4</div>
+			</button>
+		</div>
 	</div>
 
-	<div class="col-xs-12 col-sm-12 col-md-12  session-item-wrapper">
-		<div class="row">
-			
-			<div
-				class="gdlr-session-item gdlr-full-session-item gdlr-item timetable-day-4"
-				id="timetable-overview-custom">
-				<div class="gdlr-session-item-head gdlr-first">
-					<a data-toggle="tab" class="table-head-link" href="#day1" ng-class="(selectedTab == 'day1') ? 'table-head-link sands-active' : 'table-head-link sands-not-active'" ng-click="selectedTab = 'day1'">
-						<div class="gdlr-session-item-head-info">
-							<div class="gdlr-session-head-day">Day 1</div>
-							<div class="gdlr-session-head-date">10. Oct 2016</div>
-						</div></a><a data-toggle="tab" class="table-head-link" href="#day2" ng-class="(selectedTab == 'day2') ? 'table-head-link sands-active' : 'table-head-link sands-not-active'" ng-click="selectedTab = 'day2'">
-						<div class="gdlr-session-item-head-info hidden-xs">
-							<div class="gdlr-session-head-day">Day 2</div>
-							<div class="gdlr-session-head-date">11. Oct 2016</div>
-						</div></a><a data-toggle="tab" class="table-head-link" href="#day3" ng-class="(selectedTab == 'day3') ? 'table-head-link sands-active' : 'table-head-link sands-not-active'" ng-click="selectedTab = 'day3'">
-						<div class="gdlr-session-item-head-info hidden-xs">
-							<div class="gdlr-session-head-day">Day 3</div>
-							<div class="gdlr-session-head-date">12. Oct 2016</div>
-						</div></a><a data-toggle="tab" class="table-head-link" href="#day4" ng-class="(selectedTab == 'day4') ? 'table-head-link sands-active' : 'table-head-link sands-not-active'" ng-click="selectedTab = 'day4'">
-						<div class="gdlr-session-item-head-info hidden-xs">
-							<div class="gdlr-session-head-day">Day 4</div>
-							<div class="gdlr-session-head-date">13. Oct 2016</div>
-						</div></a>
+	<div class="well">
+		<div class="tab-content">
+			<div class="tab-pane fade in active" id="tab1">
+				
+				<div class="row">
+			        <div class="col-xs-12 col-sm-12">
+
+			        	<div class="row">
+			        		<h4>Conference Check-In (08:00 - 09:00)</h4>
+			        	</div>
+			        			        	
+			            <div class="row top10" ng-repeat="item in conference.day1">
+			            	<hr>		            	
+			                <div class="col-xs-1 col-sm-1">
+								<div class="cathead-img">
+									<img src="img/workshop.png" class="attachment-medium size-medium" />
+								</div>
+			                </div>
+			                <div class="col-xs-2 col-sm-2">
+								<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
+			                </div>
+			                <div class="col-xs-9 col-sm-9">
+			                    <div class="sessoin-speaker-title column">
+									<a>{{item.title}}</a>
+									<div class="twelve columns">
+										<a href="">{{item.presenter}}</a>, <em>Google</em>
+									</div>
+								</div>
+			                </div>
+			            </div>
+			            
+			            <hr>
+			            
+			            <div class="row top10"> 	
+			        		<h4>18:50 - 19:50 EXPO RECEPTION – BEER & SNACKS</h4>
+			        	</div>
+			             <div class="row top10"></div>
+			        </div>
 				</div>
-				
-				
-				<div class="tab-content">
-				
-					<!-- Day 1 -->
-					<div class="tab-pane fade in active" id="day1">
-						
-						<div class="gdlr-session-item-content-wrapper">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="session-break-content">
-								<h3 class="gdlr-session-break-title">Conference Check-In (08:00 - 09:00)</h3>
-							</div>
-							<div class="clear"></div>
-						</div>
-						
-						<div class="gdlr-session-item-content-wrapper" ng-repeat="item in conference.day1">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="gdlr-session-item-content-info ">
-								<div class="col-xs-3 session-type-icons">
-									<div class="cathead-img">
-										<img width="45" height="45" src="img/workshop.png" class="attachment-medium size-medium" />
-									</div>
-		
-								</div>
-								<div class="col-xs-9 session-date_info ">
-									<div class="gdlr-session-info">
-										<div class="session-info session-time">
-											<i class="fa fa-clock-o"></i>09:00 - 17:00
-										</div>
-										<div class="session-info session-location">
-											<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
-										</div>
-										<div class="clear"></div>
-									</div>
-								</div>
-							</div>
-							<div class="gdlr-session-item-content">
-								<div class="sessoin-speaker-title column">
-									<h3 class="gdlr-session-item-title">
-										<a>{{item.title}}</a>
-									</h3>
-									<div class="twelve columns speakers-name-and-company">
-										<a href="https://jaxlondon.com/speaker/robert-kubis/">Robert
-											{{item.presenter}}</a>, <em>Google</em>
-									</div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div><!-- End of Day 1 -->
-					
-					<!-- Day 2 -->
-					<div class="tab-pane fade" id="day2">
-						<div class="gdlr-session-item-content-wrapper">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="session-break-content">
-								<h3 class="gdlr-session-break-title">Conference Check-In (08:00 - 09:00)</h3>
-							</div>
-							<div class="clear"></div>
-						</div>
-						
-						<div class="gdlr-session-item-content-wrapper" ng-repeat="item in conference.day2">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="gdlr-session-item-content-info ">
-								<div class="col-xs-3 session-type-icons">
-									<div class="cathead-img">
-										<img width="45" height="45" src="img/workshop.png" class="attachment-medium size-medium" />
-									</div>
-		
-								</div>
-								<div class="col-xs-9 session-date_info ">
-									<div class="gdlr-session-info">
-										<div class="session-info session-time">
-											<i class="fa fa-clock-o"></i>09:00 - 17:00
-										</div>
-										<div class="session-info session-location">
-											<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
-										</div>
-										<div class="clear"></div>
-									</div>
-								</div>
-							</div>
-							<div class="gdlr-session-item-content">
-								<div class="sessoin-speaker-title column">
-									<h3 class="gdlr-session-item-title">
-										<a>{{item.title}}</a>
-									</h3>
-									<div class="twelve columns speakers-name-and-company">
-										<a href="https://jaxlondon.com/speaker/robert-kubis/">Robert
-											{{item.presenter}}</a>, <em>Google</em>
-									</div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div><!-- End of Day 2 -->
-					
-					<!-- Day 3 -->
-					<div class="tab-pane fade" id="day3">
-						<div class="gdlr-session-item-content-wrapper">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="session-break-content">
-								<h3 class="gdlr-session-break-title">Conference Check-In (08:00 - 09:00)</h3>
-							</div>
-							<div class="clear"></div>
-						</div>
-						
-						<div class="gdlr-session-item-content-wrapper" ng-repeat="item in conference.day3">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="gdlr-session-item-content-info ">
-								<div class="col-xs-3 session-type-icons">
-									<div class="cathead-img">
-										<img width="45" height="45" src="img/workshop.png" class="attachment-medium size-medium" />
-									</div>
-		
-								</div>
-								<div class="col-xs-9 session-date_info ">
-									<div class="gdlr-session-info">
-										<div class="session-info session-time">
-											<i class="fa fa-clock-o"></i>09:00 - 17:00
-										</div>
-										<div class="session-info session-location">
-											<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
-										</div>
-										<div class="clear"></div>
-									</div>
-								</div>
-							</div>
-							<div class="gdlr-session-item-content">
-								<div class="sessoin-speaker-title column">
-									<h3 class="gdlr-session-item-title">
-										<a>{{item.title}}</a>
-									</h3>
-									<div class="twelve columns speakers-name-and-company">
-										<a href="https://jaxlondon.com/speaker/robert-kubis/">Robert
-											{{item.presenter}}</a>, <em>Google</em>
-									</div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div><!-- End of Day 3 -->
-					
-					<!-- Day 4 -->
-					<div class="tab-pane fade" id="day4">
-						<div class="gdlr-session-item-content-wrapper">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="session-break-content">
-								<h3 class="gdlr-session-break-title">Conference Check-In (08:00 - 09:00)</h3>
-							</div>
-							<div class="clear"></div>
-						</div>
-						
-						<div class="gdlr-session-item-content-wrapper" ng-repeat="item in conference.day4">
-							<div class="gdlr-session-item-divider"></div>
-							<div class="gdlr-session-item-content-info ">
-								<div class="col-xs-3 session-type-icons">
-									<div class="cathead-img">
-										<img width="45" height="45" src="img/workshop.png" class="attachment-medium size-medium" />
-									</div>
-		
-								</div>
-								<div class="col-xs-9 session-date_info ">
-									<div class="gdlr-session-info">
-										<div class="session-info session-time">
-											<i class="fa fa-clock-o"></i>09:00 - 17:00
-										</div>
-										<div class="session-info session-location">
-											<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
-										</div>
-										<div class="clear"></div>
-									</div>
-								</div>
-							</div>
-							<div class="gdlr-session-item-content">
-								<div class="sessoin-speaker-title column">
-									<h3 class="gdlr-session-item-title">
-										<a>{{item.title}}</a>
-									</h3>
-									<div class="twelve columns speakers-name-and-company">
-										<a href="https://jaxlondon.com/speaker/robert-kubis/">Robert
-											{{item.presenter}}</a>, <em>Google</em>
-									</div>
-								</div>
-							</div>
-							<div class="clear"></div>
-						</div>
-					</div><!-- End of Day 4 -->
-				
-				</div><!-- End of Tab Content -->
 			</div>
-			<div class="clear"></div>
+			
+			<div class="tab-pane fade in" id="tab2">
+			    <div class="row">
+			        <div class="col-xs-12 col-sm-12">
+
+			        	<div class="row">
+			        		<h4>Conference Check-In (08:00 - 09:00)</h4>
+			        	</div>
+			        			        	
+			            <div class="row top10" ng-repeat="item in conference.day2">
+			            	<hr>		            	
+			                <div class="col-xs-1 col-sm-1">
+								<div class="cathead-img">
+									<img src="img/workshop.png" class="attachment-medium size-medium" />
+								</div>
+			                </div>
+			                <div class="col-xs-2 col-sm-2">
+								<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
+			                </div>
+			                <div class="col-xs-9 col-sm-9">
+			                    <div class="sessoin-speaker-title column">
+									<a>{{item.title}}</a>
+									<div class="twelve columns">
+										<a href="">{{item.presenter}}</a>, <em>Google</em>
+									</div>
+								</div>
+			                </div>
+			            </div>
+			            
+			            <div class="row top10">
+			            	<hr>
+			        		<h4>18:50 - 19:50 EXPO RECEPTION – BEER & SNACKS</h4>
+			        	</div>
+			            
+			        </div>
+				</div>
+			</div>
+			
+			<div class="tab-pane fade in" id="tab3">
+				<div class="row">
+			        <div class="col-xs-12 col-sm-12">
+
+			        	<div class="row">
+			        		<h4>Conference Check-In (08:00 - 09:00)</h4>
+			        	</div>
+			        			        	
+			            <div class="row top10" ng-repeat="item in conference.day3">
+			            	<hr>		            	
+			                <div class="col-xs-1 col-sm-1">
+								<div class="cathead-img">
+									<img src="img/workshop.png" class="attachment-medium size-medium" />
+								</div>
+			                </div>
+			                <div class="col-xs-2 col-sm-2">
+								<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
+			                </div>
+			                <div class="col-xs-9 col-sm-9">
+			                    <div class="sessoin-speaker-title column">
+									<a>{{item.title}}</a>
+									<div class="twelve columns">
+										<a href="">{{item.presenter}}</a>, <em>Google</em>
+									</div>
+								</div>
+			                </div>
+			            </div>
+			            
+			            <div class="row top10">
+			            	<hr>
+			        		<h4>18:50 - 19:50 EXPO RECEPTION – BEER & SNACKS</h4>
+			        	</div>
+			            
+			        </div>
+				</div>
+			</div>
+			
+			<div class="tab-pane fade in" id="tab4">
+				<div class="row">
+			        <div class="col-xs-12 col-sm-12">
+
+			        	<div class="row">
+			        		<h4>Conference Check-In (08:00 - 09:00)</h4>
+			        	</div>
+			        			        	
+			            <div class="row top10" ng-repeat="item in conference.day4">
+			            	<hr>		            	
+			                <div class="col-xs-1 col-sm-1">
+								<div class="cathead-img">
+									<img src="img/workshop.png" class="attachment-medium size-medium" />
+								</div>
+			                </div>
+			                <div class="col-xs-2 col-sm-2">
+								<i class="fa fa-location-arrow"></i>Room {{item.room.name}}
+			                </div>
+			                <div class="col-xs-9 col-sm-9">
+			                    <div class="sessoin-speaker-title column">
+									<a>{{item.title}}</a>
+									<div class="twelve columns">
+										<a href="">{{item.presenter}}</a>, <em>Google</em>
+									</div>
+								</div>
+			                </div>
+			            </div>
+			            
+			            <div class="row top10">
+			            	<hr>
+			        		<h4>18:50 - 19:50 EXPO RECEPTION – BEER & SNACKS</h4>
+			        	</div>
+			            
+			        </div>
+				</div>
+			</div>
 		</div>
 	</div>
 
-	<div class="clear"></div>
 </div>

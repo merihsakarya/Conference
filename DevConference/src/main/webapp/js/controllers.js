@@ -1,6 +1,9 @@
 app.controller('ConferenceCtrl', ['$scope', '$http', function($scope, $http) {
 
-	$scope.selectedTab = 'day1';
+	$scope.selectTab = function($event) {
+		$(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
+		$($event.target).removeClass("btn-default").addClass("btn-primary");
+	}
 	
 	var day1StartDate = new Date("2016/10/10 00:00:00").getTime();
 	var day2StartDate = new Date("2016/10/11 00:00:00").getTime();
