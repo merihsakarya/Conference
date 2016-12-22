@@ -13,25 +13,25 @@
     </div>
 
 	<div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
-		<div class="btn-group" role="group">
-			<button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab" ng-click="selectTab($event)">
+		<div class="btn-group" role="group" ng-click="selectTab($event)">
+			<button type="button" id="day1" class="btn btn-primary" href="#tab1" data-toggle="tab" ng-click="selectTab($event)">
 				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
 				<div>Day 1</div>
 			</button>
 		</div>
-		<div class="btn-group" role="group">
-			<button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab" ng-click="selectTab($event)">
+		<div class="btn-group" role="group" >
+			<button type="button" id="day2" class="btn btn-default" href="#tab2" data-toggle="tab" ng-click="selectTab($event)">
 				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
 				<div>Day 2</div>
 			</button>
 		</div>
-		<div class="btn-group" role="group">
+		<div class="btn-group" role="day3">
 			<button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab" ng-click="selectTab($event)">
 				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
 				<div>Day 3</div>
 			</button>
 		</div>
-		<div class="btn-group" role="group">
+		<div class="btn-group" role="day4">
 			<button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab" ng-click="selectTab($event)">
 				<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
 				<div>Day 4</div>
