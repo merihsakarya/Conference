@@ -7,7 +7,7 @@ function config($stateProvider, $urlRouterProvider) {
             data: { pageTitle: 'index' }
         })
         .state('pages.blank_page_1', {
-            url: "/blank_page2",
+            url: "/blank_page1",
             templateUrl: "views/pages/blank-page.html",
             data: { pageTitle: 'Sample blank page' }
         })
