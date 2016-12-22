@@ -17,36 +17,36 @@ import com.conference.service.PresentationService;
 @RestController
 @RequestMapping("/conference")
 class ConferenceResource {
-	
-	@Autowired
-	PresentationService presentationService;
-	
-	@RequestMapping(value = "/echo", method = RequestMethod.GET)
-	public String echo() {
+    
+    @Autowired
+    PresentationService presentationService;
+    
+    @RequestMapping(value = "/echo", method = RequestMethod.GET)
+    public String echo() {
         return "Echo!";
     }
-	
-	@RequestMapping(value = "/presentation/add", method = RequestMethod.POST)
+    
+    @RequestMapping(value = "/presentation/add", method = RequestMethod.POST)
     public ResponseEntity<Presentation> createPresentation(@RequestBody Presentation prs) {
         
         Presentation presentation = presentationService.createPresentation(prs);
-		
-		return new ResponseEntity<Presentation>(presentation, HttpStatus.OK);
+        
+        return new ResponseEntity<Presentation>(presentation, HttpStatus.OK);
     }
-	
-	@RequestMapping(value = "/presentation/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Presentation> getCustomerById(@PathVariable Long id) {
-		
-		Presentation presentation = presentationService.getPresentationById(id);
-		
-		return new ResponseEntity<Presentation>(presentation, HttpStatus.OK);
+    
+    @RequestMapping(value = "/presentation/{id}", method = RequestMethod.GET)
+    public ResponseEntity<Presentation> getCustomerById(@PathVariable Long id) {
+        
+        Presentation presentation = presentationService.getPresentationById(id);
+        
+        return new ResponseEntity<Presentation>(presentation, HttpStatus.OK);
     }
-	
-	@RequestMapping(value = "/presentations", method = RequestMethod.GET)
-	public ResponseEntity<List<Presentation>> listPresentations() {
-		
-		List<Presentation> presentations = presentationService.listPresentations();
-		
-		return new ResponseEntity<List<Presentation>>(presentations, HttpStatus.OK);
+    
+    @RequestMapping(value = "/presentations", method = RequestMethod.GET)
+    public ResponseEntity<List<Presentation>> listPresentations() {
+        
+        List<Presentation> presentations = presentationService.listPresentations();
+        
+        return new ResponseEntity<List<Presentation>>(presentations, HttpStatus.OK);
     }
 }

@@ -10,23 +10,23 @@ import com.conference.entity.Presentation;
 
 @Service
 public class PresentationService {
-	
-	@Autowired
-	PresentationDao presentationDao;
-	
-	public Presentation createPresentation(Presentation presentation){
-		return presentationDao.createPresentation(presentation);
-	}
-	
-	public Presentation updatePresentation(Presentation presentation){
-		return presentationDao.updatePresentation(presentation);
-	}
+    
+    @Autowired
+    PresentationDao presentationDao;
+    
+    public Presentation createPresentation(Presentation presentation){
+        return presentationDao.createPresentation(presentation);
+    }
+    
+    public Presentation updatePresentation(Presentation presentation){
+        return presentationDao.updatePresentation(presentation);
+    }
 
-	public Presentation getPresentationById(long id){
-		return presentationDao.getPresentationById(id);
-	}
+    public Presentation getPresentationById(long id){
+        return presentationDao.getPresentationById(id);
+    }
 
-	public List<Presentation> listPresentations(){
-		return presentationDao.listPresentations();
-	}
+    public List<Presentation> listPresentations(){
+        return presentationDao.listPresentations();
+    }
 }
