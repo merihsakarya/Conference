@@ -2,7 +2,7 @@ app.controller('ConferenceCtrl', ['$scope', '$http', function($scope, $http) {
 
 	$scope.selectTab = function($event) {
 		$(".btn-pref .btn").removeClass("btn-primary").addClass("btn-default");
-		$($event.target).removeClass("btn-default").addClass("btn-primary");
+		$($event.currentTarget).removeClass("btn-default").addClass("btn-primary");
 	}
 	
 	var day1StartDate = new Date("2016/10/10 00:00:00").getTime();
