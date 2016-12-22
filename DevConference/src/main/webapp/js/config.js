@@ -6,20 +6,15 @@ function config($stateProvider, $urlRouterProvider) {
             templateUrl: "views/pages/conference.html",
             data: { pageTitle: 'index' }
         })
-        .state('pages', {
-            abstract: true,
-            url: "/pages",
-            templateUrl: "views/pages/common.html",
-        })
-        .state('pages.blank_page', {
-            url: "/blank_page",
-            templateUrl: "views/pages/conference.html",
-            data: { pageTitle: 'Blank page' }
-        })
-         .state('pages.blank_page2', {
+        .state('pages.blank_page_1', {
             url: "/blank_page2",
-            templateUrl: "views/pages/blank-page2.html",
-            data: { pageTitle: 'Another blank page' }
+            templateUrl: "views/pages/blank-page.html",
+            data: { pageTitle: 'Sample blank page' }
+        })
+        .state('pages.blank_page_2', {
+            url: "/blank_page2",
+            templateUrl: "views/pages/blank-page.html",
+            data: { pageTitle: 'Another Sample blank page' }
         })
 }
 angular
